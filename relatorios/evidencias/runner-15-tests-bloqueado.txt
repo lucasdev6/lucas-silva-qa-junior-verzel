@@ -1,0 +1,6 @@
+Comando: npm test
+Início UTC: 2026-10-07T02:22:19.679Z
+Testes: 15; falha antes das ações, durante inicialização do navegador.
+Erro: [pid=62614][err] [1006/232220.062837:FATAL:base/apple/mach_port_rendezvous_mac.cc:159] Check failed: kr == KERN_SUCCESS. bootstrap_check_in org.chromium.Chromium.MachPortRendezvousServer.62614: Permission denied (1100)
+Resultado: bloqueio de infraestrutura, não conclusão funcional da suíte.
+Verificação auxiliar: ../VERIFICACAO_15_TESTES.md

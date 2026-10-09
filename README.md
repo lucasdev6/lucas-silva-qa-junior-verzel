@@ -1,88 +1,34 @@
-# Verzel Store — automação E2E
+# Teste técnico QA — Verzel Store
 
-Suíte Playwright em TypeScript para validar cupons, frete, limite de quantidade e os valores da promoção na confirmação da compra. São 15 testes de interface organizados em quatro specs. Fonte: [listagem dos testes](../relatorios/evidencias/listagem-suite-atual.txt), linhas 1–17.
+Este projeto reúne o plano de teste, a automação E2E, os resultados e os bugs da história de **cupom de desconto e frete grátis**, considerando os critérios CA01 a CA11. Fonte: [documentação](VERZEL_STORE_DOCUMENTACAO_FIEL_COM_INSTRUCAO_CODEX.md), linhas 7–21.
 
-## Requisitos e instalação
+## Onde encontrar cada entrega
 
-Utilize Node.js 22 ou superior, npm e acesso à internet. A partir da raiz `teste vaga`:
-
-```sh
-cd automacao-playwright
-npm ci
-npx playwright install chromium
-```
-
-Os comandos das próximas seções devem ser executados dentro de `automacao-playwright`.
-
-## Executar os testes
-
-| Comando | Finalidade |
-|---|---|
-| `npm test` | Executar toda a suíte sem janela visível |
-| `npm run test:headed` | Executar a suíte com navegador visível |
-| `npm run test:ui` | Abrir a interface do Playwright Test |
-| `npm run test:demo` | Executar CT13: formulário e confirmação com cupom e frete grátis |
-| `npx playwright test tests/cupons.spec.ts` | Executar somente os testes de cupons |
-| `npx playwright test --grep CT01B` | Executar um cenário pelo identificador |
-| `npx playwright test --list` | Listar os testes disponíveis |
-| `npm run report` | Abrir o relatório HTML da última tentativa local |
-
-Os scripts estão em [package.json](package.json), linhas 5–10. O cenário da demonstração está em [checkout.spec.ts](tests/checkout.spec.ts), linha 8.
-
-## Configuração
-
-O arquivo [playwright.config.ts](playwright.config.ts), linhas 5–18, define Chromium, um worker, zero retries e a URL padrão:
-
-```text
-https://verzel-store.qa-test-verzel-store.workers.dev
-```
-
-As variáveis opcionais são:
-
-| Variável | Finalidade | Padrão |
+| Entrega | Local | Conteúdo |
 |---|---|---|
-| `BASE_URL` | Endereço do ambiente a testar | URL acima |
-| `SLOW_MO` | Pausa entre ações, em milissegundos | 800 na demonstração; 0 nos demais comandos |
+| Plano de teste e cenários em Gherkin | [PLANO_TESTE_GHERKIN.md](relatorios/PLANO_TESTE_GHERKIN.md) | Objetivo, dados, pré-condições, cenários e resultado esperado |
+| Relatório geral | [RELATORIO_GERAL.md](relatorios/RELATORIO_GERAL.md) | Escopo, resultados por critério, conclusão e pendências |
+| Bug de quantidade | [BUG-01_LIMITE_QUANTIDADE_API.md](relatorios/bugs/BUG-01_LIMITE_QUANTIDADE_API.md) | Reprodução, esperado, obtido e impacto da aceitação de seis unidades pela API |
+| Bug de frete | [BUG-02_FRETE_NO_LIMITE.md](relatorios/bugs/BUG-02_FRETE_NO_LIMITE.md) | Reprodução e capturas da cobrança de frete no subtotal exato de R$ 200,00 |
+| Verificação dos 15 testes atuais | [VERIFICACAO_15_TESTES.md](relatorios/VERIFICACAO_15_TESTES.md) | Resultados da verificação auxiliar e limitação do runner oficial |
+| Evidências | [relatorios/evidencias](relatorios/evidencias) | Requisições/respostas, registros de interface, resultados e capturas |
+| Automação E2E | [README da automação](automacao-playwright/README.md) | Instalação, execução, configuração e estrutura do projeto |
+| Enunciado recebido | [Teste tecnico QA Junior - Verzel.pdf](<Teste tecnico QA Junior - Verzel.pdf>) | Instruções do processo seletivo |
+| Documentação de referência | [Documentação da loja](VERZEL_STORE_DOCUMENTACAO_FIEL_COM_INSTRUCAO_CODEX.md) | História, critérios de aceite, dados e contrato da API |
 
-Para desacelerar a demonstração no macOS/Linux:
+Para compartilhar relatórios com suas evidências, envie a pasta [relatorios](relatorios) inteira. Os documentos usam caminhos relativos e referências de arquivo e linha. O relatório geral também contém contexto e valores suficientes para ser lido sozinho. Fonte: [RELATORIO_GERAL.md](relatorios/RELATORIO_GERAL.md), linha 11.
 
-```sh
-SLOW_MO=1500 npm run test:demo
-```
+## Materiais históricos
 
-## Arquitetura e manutenção
+[RELATORIO_QA_VERZEL.md](RELATORIO_QA_VERZEL.md) e [evidencias_qa/](evidencias_qa/) preservam análises e evidências anteriores ao recorte atual. Para avaliar a entrega vigente, comece pelos documentos de [relatorios/](relatorios/) e pela suíte em [automacao-playwright/tests/](automacao-playwright/tests/).
 
-```text
-automacao-playwright/
-├── elements/             # Locators por tela ou componente
-├── page/                 # Ações e validações dos Page Objects
-├── fixtures/             # Instâncias isoladas por teste
-├── tests/
-│   ├── carrinho.spec.ts   # Limite de quantidade
-│   ├── cupons.spec.ts     # Aplicação, normalização, rejeição e remoção
-│   ├── frete.spec.ts      # Limites, faltante e base do cálculo
-│   └── checkout.spec.ts   # Formulário válido e valores na confirmação
-├── playwright.config.ts
-├── package.json
-└── package-lock.json
-```
+## Uso de IA
 
-Cada spec usa `test.describe` e declara cada cenário em um `test`. O spec chama métodos de [page](page); ações e asserções ficam nos Page Objects, enquanto os seletores ficam em [elements](elements). A fixture fornece instâncias por teste. Exemplos: [cupons.spec.ts](tests/cupons.spec.ts), linha 3; [carrinho.page.ts](page/carrinho.page.ts), linha 6; [loja.fixture.ts](fixtures/loja.fixture.ts), linha 16.
+A IA utilizada foi o Codex, como apoio à análise da história, à execução de testes e à construção da automação. Primeiro, a história e a documentação da loja foram organizadas em um arquivo Markdown (`.md`), permitindo que a IA lesse os critérios de aceite, as regras de negócio e o contrato da API. Esse material serviu de referência para o trabalho: [documentação em Markdown](VERZEL_STORE_DOCUMENTACAO_FIEL_COM_INSTRUCAO_CODEX.md), linhas 7–21 e 67–267.
 
-Ao adicionar um cenário, mantenha esse padrão: seletores em [elements](elements), métodos em [page](page) e sequência do cenário no spec correspondente. Prepare os dados dentro do próprio teste ou de seu `beforeEach`, sem depender de outro cenário.
+Com essa referência, a IA auxiliou no levantamento dos cenários, na realização de requisições de teste à API e na execução assistida de cenários pela interface, como apoio aos testes manuais e exploratórios. Também apoiou a comparação entre os resultados esperados e obtidos, o registro das evidências e a elaboração dos relatórios de bugs e do plano em Gherkin. As formas de execução e suas limitações estão descritas no [relatório geral](relatorios/RELATORIO_GERAL.md), na seção “Ambiente, dados e método”.
 
-## Relatórios e evidências gerados
+Na automação, o Codex foi utilizado para criar os testes E2E em Playwright com TypeScript e organizar o projeto no padrão Page Object, separando seletores, ações, validações e specs. A IA também apoiou a revisão dos cenários para manter o escopo nos critérios de aceite e identificar possíveis duplicações. O código está em [automacao-playwright](automacao-playwright).
 
-| Caminho | Conteúdo |
-|---|---|
-| `playwright-report/index.html` | Relatório HTML |
-| `test-results/results.json` | Resultado estruturado |
-| `test-results/` | Screenshots, vídeos e traces de falhas, quando o navegador consegue iniciar |
+Após essas etapas, foi realizada uma análise manual do material produzido para conferir a aderência à história e aos critérios de aceite, revisar os resultados e as evidências e verificar a organização e a clareza dos testes e relatórios. Essa revisão complementou o uso da IA; não significa que todos os testes passaram ou que as pendências registradas foram resolvidas. Os resultados e as limitações permanecem documentados em [VERIFICACAO_15_TESTES.md](relatorios/VERIFICACAO_15_TESTES.md).
 
-A retenção dos anexos está configurada em [playwright.config.ts](playwright.config.ts), linhas 10–17. Esses diretórios são gerados e ignorados pelo Git. `npm run report` abre a última tentativa local; confira a data e os erros antes de interpretá-la.
-
-## Falha conhecida
-
-CT06, CT08 e CT14 exigem frete grátis no subtotal exato de R$ 200,00. A loja cobra frete nessa condição, portanto esses testes podem falhar pelo BUG-02. Referências: [frete.spec.ts](tests/frete.spec.ts), linhas 24 e 52; [checkout.spec.ts](tests/checkout.spec.ts), linha 28; [relatório do bug](../relatorios/bugs/BUG-02_FRETE_NO_LIMITE.md), linha 5.
-
-Para o plano, os resultados registrados, as limitações da execução e a localização das demais entregas, consulte o [README da raiz](../readme.md).
