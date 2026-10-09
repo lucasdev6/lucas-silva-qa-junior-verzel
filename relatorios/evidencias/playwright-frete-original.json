@@ -1,0 +1,427 @@
+{
+  "config": {
+    "configFile": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/playwright.config.ts",
+    "rootDir": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.60.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "frete.spec.ts",
+      "file": "frete.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "E2E frete: subtotal 59.9, esperado 19.9",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1422,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T01:54:21.241Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/test-results/frete-E2E-frete-subtotal-59-9-esperado-19-9-chromium/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f40d47779858a7592c4d-0bfdd078ce82f18f3698",
+          "file": "frete.spec.ts",
+          "line": 11,
+          "column": 7
+        },
+        {
+          "title": "E2E frete: subtotal 199.6, esperado 19.9",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 522,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T01:54:22.792Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/test-results/frete-E2E-frete-subtotal-199-6-esperado-19-9-chromium/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f40d47779858a7592c4d-a22b9140ae3bd4d4b9dd",
+          "file": "frete.spec.ts",
+          "line": 11,
+          "column": 7
+        },
+        {
+          "title": "E2E frete: subtotal 200, esperado 0",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 10730,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-valor=\"frete\"]')\nExpected: \u001b[32m\"Grátis\"\u001b[39m\nReceived: \u001b[31m\"R$ 19,90\"\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-valor=\"frete\"]')\u001b[22m\n\u001b[2m    24 × locator resolved to <dd data-valor=\"frete\">R$ 19,90</dd>\u001b[22m\n\u001b[2m       - unexpected value \"R$ 19,90\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-valor=\"frete\"]')\nExpected: \u001b[32m\"Grátis\"\u001b[39m\nReceived: \u001b[31m\"R$ 19,90\"\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-valor=\"frete\"]')\u001b[22m\n\u001b[2m    24 × locator resolved to <dd data-valor=\"frete\">R$ 19,90</dd>\u001b[22m\n\u001b[2m       - unexpected value \"R$ 19,90\"\u001b[22m\n\n    at ResumoPage.validarFrete (/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/page/resumo.page.ts:14:48)\n    at /Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/tests/frete.spec.ts:14:18",
+                    "location": {
+                      "file": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/page/resumo.page.ts",
+                      "column": 48,
+                      "line": 14
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../page/resumo.page.ts:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m   }\n \u001b[90m 13 |\u001b[39m   \u001b[36masync\u001b[39m validarFrete(valor\u001b[33m:\u001b[39m number) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39melements\u001b[33m.\u001b[39mvalor(\u001b[32m'frete'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(valor \u001b[33m===\u001b[39m \u001b[35m0\u001b[39m \u001b[33m?\u001b[39m \u001b[32m'Grátis'\u001b[39m \u001b[33m:\u001b[39m moeda(valor))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m   }\n \u001b[90m 16 |\u001b[39m   \u001b[36masync\u001b[39m validarTotal(valor\u001b[33m:\u001b[39m number) { \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39melements\u001b[33m.\u001b[39mvalor(\u001b[32m'total'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(moeda(valor))\u001b[33m;\u001b[39m }\n \u001b[90m 17 |\u001b[39m   \u001b[36masync\u001b[39m validarFaltanteFrete(subtotal\u001b[33m:\u001b[39m number\u001b[33m,\u001b[39m frete\u001b[33m:\u001b[39m number) {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/page/resumo.page.ts",
+                        "column": 48,
+                        "line": 14
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-valor=\"frete\"]')\nExpected: \u001b[32m\"Grátis\"\u001b[39m\nReceived: \u001b[31m\"R$ 19,90\"\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-valor=\"frete\"]')\u001b[22m\n\u001b[2m    24 × locator resolved to <dd data-valor=\"frete\">R$ 19,90</dd>\u001b[22m\n\u001b[2m       - unexpected value \"R$ 19,90\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../page/resumo.page.ts:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m   }\n \u001b[90m 13 |\u001b[39m   \u001b[36masync\u001b[39m validarFrete(valor\u001b[33m:\u001b[39m number) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39melements\u001b[33m.\u001b[39mvalor(\u001b[32m'frete'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(valor \u001b[33m===\u001b[39m \u001b[35m0\u001b[39m \u001b[33m?\u001b[39m \u001b[32m'Grátis'\u001b[39m \u001b[33m:\u001b[39m moeda(valor))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m   }\n \u001b[90m 16 |\u001b[39m   \u001b[36masync\u001b[39m validarTotal(valor\u001b[33m:\u001b[39m number) { \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39melements\u001b[33m.\u001b[39mvalor(\u001b[32m'total'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(moeda(valor))\u001b[33m;\u001b[39m }\n \u001b[90m 17 |\u001b[39m   \u001b[36masync\u001b[39m validarFaltanteFrete(subtotal\u001b[33m:\u001b[39m number\u001b[33m,\u001b[39m frete\u001b[33m:\u001b[39m number) {\u001b[0m\n\u001b[2m    at ResumoPage.validarFrete (/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/page/resumo.page.ts:14:48)\u001b[22m\n\u001b[2m    at /Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/tests/frete.spec.ts:14:18\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T01:54:23.335Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/test-results/frete-E2E-frete-subtotal-200-esperado-0-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/test-results/frete-E2E-frete-subtotal-200-esperado-0-chromium/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/test-results/frete-E2E-frete-subtotal-200-esperado-0-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/test-results/frete-E2E-frete-subtotal-200-esperado-0-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/page/resumo.page.ts",
+                    "column": 48,
+                    "line": 14
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f40d47779858a7592c4d-e3c6a7cb6c9129d9794c",
+          "file": "frete.spec.ts",
+          "line": 11,
+          "column": 7
+        },
+        {
+          "title": "E2E frete: subtotal 229.9, esperado 0",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 478,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T01:54:34.299Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/test-results/frete-E2E-frete-subtotal-229-9-esperado-0-chromium/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f40d47779858a7592c4d-87af2de749473510ab4e",
+          "file": "frete.spec.ts",
+          "line": 11,
+          "column": 7
+        },
+        {
+          "title": "E2E frete considera subtotal anterior ao desconto",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1827,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T01:54:34.902Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/test-results/frete-E2E-frete-considera-subtotal-anterior-ao-desconto-chromium/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f40d47779858a7592c4d-00946d33cc1473717c8a",
+          "file": "frete.spec.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "E2E frete grátis no limite 200 com cupom até a confirmação",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8845,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-valor=\"frete\"]')\nExpected: \u001b[32m\"Grátis\"\u001b[39m\nReceived: \u001b[31m\"R$ 19,90\"\u001b[39m\nTimeout:  2000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-valor=\"frete\"]')\u001b[22m\n\u001b[2m    21 × locator resolved to <dd data-valor=\"frete\">R$ 19,90</dd>\u001b[22m\n\u001b[2m       - unexpected value \"R$ 19,90\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-valor=\"frete\"]')\nExpected: \u001b[32m\"Grátis\"\u001b[39m\nReceived: \u001b[31m\"R$ 19,90\"\u001b[39m\nTimeout:  2000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-valor=\"frete\"]')\u001b[22m\n\u001b[2m    21 × locator resolved to <dd data-valor=\"frete\">R$ 19,90</dd>\u001b[22m\n\u001b[2m       - unexpected value \"R$ 19,90\"\u001b[22m\n\n    at ResumoPage.validarFreteETotalSemInterromper (/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/page/resumo.page.ts:22:53)\n    at /Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/tests/frete.spec.ts:41:16",
+                    "location": {
+                      "file": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/page/resumo.page.ts",
+                      "column": 53,
+                      "line": 22
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../page/resumo.page.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   }\n \u001b[90m 21 |\u001b[39m   \u001b[36masync\u001b[39m validarFreteETotalSemInterromper(frete\u001b[33m:\u001b[39m number\u001b[33m,\u001b[39m total\u001b[33m:\u001b[39m number) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39msoft(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39melements\u001b[33m.\u001b[39mvalor(\u001b[32m'frete'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(frete \u001b[33m===\u001b[39m \u001b[35m0\u001b[39m \u001b[33m?\u001b[39m \u001b[32m'Grátis'\u001b[39m \u001b[33m:\u001b[39m moeda(frete)\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m2000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39msoft(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39melements\u001b[33m.\u001b[39mvalor(\u001b[32m'total'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(moeda(total)\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m2000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m   }\n \u001b[90m 25 |\u001b[39m }\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/page/resumo.page.ts",
+                        "column": 53,
+                        "line": 22
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-valor=\"frete\"]')\nExpected: \u001b[32m\"Grátis\"\u001b[39m\nReceived: \u001b[31m\"R$ 19,90\"\u001b[39m\nTimeout:  2000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-valor=\"frete\"]')\u001b[22m\n\u001b[2m    21 × locator resolved to <dd data-valor=\"frete\">R$ 19,90</dd>\u001b[22m\n\u001b[2m       - unexpected value \"R$ 19,90\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../page/resumo.page.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   }\n \u001b[90m 21 |\u001b[39m   \u001b[36masync\u001b[39m validarFreteETotalSemInterromper(frete\u001b[33m:\u001b[39m number\u001b[33m,\u001b[39m total\u001b[33m:\u001b[39m number) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39msoft(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39melements\u001b[33m.\u001b[39mvalor(\u001b[32m'frete'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(frete \u001b[33m===\u001b[39m \u001b[35m0\u001b[39m \u001b[33m?\u001b[39m \u001b[32m'Grátis'\u001b[39m \u001b[33m:\u001b[39m moeda(frete)\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m2000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39msoft(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39melements\u001b[33m.\u001b[39mvalor(\u001b[32m'total'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(moeda(total)\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m2000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m   }\n \u001b[90m 25 |\u001b[39m }\u001b[0m\n\u001b[2m    at ResumoPage.validarFreteETotalSemInterromper (/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/page/resumo.page.ts:22:53)\u001b[22m\n\u001b[2m    at /Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/tests/frete.spec.ts:41:16\u001b[22m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/page/resumo.page.ts",
+                        "column": 53,
+                        "line": 23
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-valor=\"total\"]')\nExpected: \u001b[32m\"R$ 1\u001b[7m80,0\u001b[27m0\"\u001b[39m\nReceived: \u001b[31m\"R$ 1\u001b[7m99,9\u001b[27m0\"\u001b[39m\nTimeout:  2000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-valor=\"total\"]')\u001b[22m\n\u001b[2m    21 × locator resolved to <dd data-valor=\"total\">R$ 199,90</dd>\u001b[22m\n\u001b[2m       - unexpected value \"R$ 199,90\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../page/resumo.page.ts:23\n\n\u001b[0m \u001b[90m 21 |\u001b[39m   \u001b[36masync\u001b[39m validarFreteETotalSemInterromper(frete\u001b[33m:\u001b[39m number\u001b[33m,\u001b[39m total\u001b[33m:\u001b[39m number) {\n \u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39msoft(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39melements\u001b[33m.\u001b[39mvalor(\u001b[32m'frete'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(frete \u001b[33m===\u001b[39m \u001b[35m0\u001b[39m \u001b[33m?\u001b[39m \u001b[32m'Grátis'\u001b[39m \u001b[33m:\u001b[39m moeda(frete)\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m2000\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39msoft(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39melements\u001b[33m.\u001b[39mvalor(\u001b[32m'total'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(moeda(total)\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m2000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m   }\n \u001b[90m 25 |\u001b[39m }\n \u001b[90m 26 |\u001b[39m\u001b[0m\n\u001b[2m    at ResumoPage.validarFreteETotalSemInterromper (/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/page/resumo.page.ts:23:53)\u001b[22m\n\u001b[2m    at /Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/tests/frete.spec.ts:41:3\u001b[22m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/page/resumo.page.ts",
+                        "column": 53,
+                        "line": 22
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-valor=\"frete\"]')\nExpected: \u001b[32m\"Grátis\"\u001b[39m\nReceived: \u001b[31m\"R$ 19,90\"\u001b[39m\nTimeout:  2000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-valor=\"frete\"]')\u001b[22m\n\u001b[2m    21 × locator resolved to <dd data-valor=\"frete\">R$ 19,90</dd>\u001b[22m\n\u001b[2m       - unexpected value \"R$ 19,90\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../page/resumo.page.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m   }\n \u001b[90m 21 |\u001b[39m   \u001b[36masync\u001b[39m validarFreteETotalSemInterromper(frete\u001b[33m:\u001b[39m number\u001b[33m,\u001b[39m total\u001b[33m:\u001b[39m number) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39msoft(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39melements\u001b[33m.\u001b[39mvalor(\u001b[32m'frete'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(frete \u001b[33m===\u001b[39m \u001b[35m0\u001b[39m \u001b[33m?\u001b[39m \u001b[32m'Grátis'\u001b[39m \u001b[33m:\u001b[39m moeda(frete)\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m2000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39msoft(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39melements\u001b[33m.\u001b[39mvalor(\u001b[32m'total'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(moeda(total)\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m2000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m   }\n \u001b[90m 25 |\u001b[39m }\u001b[0m\n\u001b[2m    at ResumoPage.validarFreteETotalSemInterromper (/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/page/resumo.page.ts:22:53)\u001b[22m\n\u001b[2m    at /Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/tests/frete.spec.ts:46:16\u001b[22m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/page/resumo.page.ts",
+                        "column": 53,
+                        "line": 23
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-valor=\"total\"]')\nExpected: \u001b[32m\"R$ 1\u001b[7m80,0\u001b[27m0\"\u001b[39m\nReceived: \u001b[31m\"R$ 1\u001b[7m99,9\u001b[27m0\"\u001b[39m\nTimeout:  2000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-valor=\"total\"]')\u001b[22m\n\u001b[2m    21 × locator resolved to <dd data-valor=\"total\">R$ 199,90</dd>\u001b[22m\n\u001b[2m       - unexpected value \"R$ 199,90\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../page/resumo.page.ts:23\n\n\u001b[0m \u001b[90m 21 |\u001b[39m   \u001b[36masync\u001b[39m validarFreteETotalSemInterromper(frete\u001b[33m:\u001b[39m number\u001b[33m,\u001b[39m total\u001b[33m:\u001b[39m number) {\n \u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39msoft(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39melements\u001b[33m.\u001b[39mvalor(\u001b[32m'frete'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(frete \u001b[33m===\u001b[39m \u001b[35m0\u001b[39m \u001b[33m?\u001b[39m \u001b[32m'Grátis'\u001b[39m \u001b[33m:\u001b[39m moeda(frete)\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m2000\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39msoft(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39melements\u001b[33m.\u001b[39mvalor(\u001b[32m'total'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(moeda(total)\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m2000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m   }\n \u001b[90m 25 |\u001b[39m }\n \u001b[90m 26 |\u001b[39m\u001b[0m\n\u001b[2m    at ResumoPage.validarFreteETotalSemInterromper (/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/page/resumo.page.ts:23:53)\u001b[22m\n\u001b[2m    at /Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/tests/frete.spec.ts:46:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-07T01:54:36.797Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/test-results/frete-E2E-frete-grátis-no--88b7b-com-cupom-até-a-confirmação-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/test-results/frete-E2E-frete-grátis-no--88b7b-com-cupom-até-a-confirmação-chromium/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/test-results/frete-E2E-frete-grátis-no--88b7b-com-cupom-até-a-confirmação-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/test-results/frete-E2E-frete-grátis-no--88b7b-com-cupom-até-a-confirmação-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/lucassilva/Documents/Lucas's files/teste vaga/automacao-playwright/page/resumo.page.ts",
+                    "column": 53,
+                    "line": 22
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f40d47779858a7592c4d-32f62b5ba61437eef1ab",
+          "file": "frete.spec.ts",
+          "line": 36,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-07T01:54:20.862Z",
+    "duration": 24836.886000000002,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

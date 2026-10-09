@@ -1,0 +1,12 @@
+Transcrição seletiva manual conferida nas cinco páginas renderizadas do PDF. Linhas desta transcrição: o PDF é composto de imagens e não fornece linhas textuais.
+Página 2 — Entrega: cupom de desconto e frete grátis; ler toda a documentação, principalmente Sobre este ambiente, antes de testar.
+Página 3 — Entregar cenários derivados da documentação; Gherkin é um diferencial.
+Página 3 — Executar testes manuais e exploratórios e registrar resultado de cada cenário.
+Página 3 — Reportar todos os bugs encontrados e documentar evidências da execução.
+Página 3 — Automatizar pelo menos três cenários com Playwright e criar README com execução e localização das entregas.
+Página 3 — Reunir entregas em um único repositório público no GitHub.
+Página 4 — Prazo: cinco dias corridos a partir do recebimento; formato livre para cenários, bugs e evidências, desde que no repositório.
+Página 4 — Uso de IA permitido; informar onde e como foi usada no formulário de envio.
+Página 4 — Ambiente compartilhado; testes de carga, estresse e segurança fora do escopo por interferirem em outros candidatos.
+Página 4 — Registrar interpretação de ambiguidades e seguir em frente.
+Página 5 — Formulário https://elitedev.verzel.com.br/ com contato, repositório único e declaração de IA; campo Deploy não se aplica.
